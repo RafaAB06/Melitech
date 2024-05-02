@@ -1,0 +1,338 @@
+html, body {
+    background-color: rgb(255, 255, 255);
+
+    height: 100%;
+    margin: 0;
+}
+
+.pre_linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+    width: auto;
+    background-color: black;
+}
+
+.icon_ifsc,
+.icon {
+    height: 60px;
+    width: auto;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+.icon_ifsc:hover{
+    cursor: pointer;
+}
+
+.linha{
+    height: 2px;
+    width: auto;
+
+    background-color: gray;
+}
+
+.topo{
+    background-color: black;
+
+    height: 50px;
+    width: auto;
+
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.guia{
+    background-color: rgb(0,0,0,0);
+
+    height: 30px;
+    width: 16%;
+
+    border: outset 5px gray;
+    margin: auto;
+
+    font-family: sans-serif;
+    font-size: 15px;
+
+    color: rgb(255, 255, 255);
+}
+
+.guia:hover{
+    cursor: pointer;
+}
+
+.guia_selected{
+    background-color: rgba(75, 75, 75, 0.981);
+
+    height: 30px;
+    width: 16%;
+
+    border: none;
+    margin: auto;
+
+    font-family: sans-serif;
+    font-size: 15px;
+
+    color: rgb(255, 255, 255);
+}
+
+.guia:hover{
+    background-color: rgba(75, 75, 75, 0.981);
+}
+
+/*################################################################################################## PAGINA 1*/
+.head{
+    height:max-content;
+    width:500px;
+
+    margin: 2.5% auto auto auto;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    transition: 0.3s ease-in-out;
+}
+
+.melitechLogo{
+    max-height: 100%;
+    width: 500px;
+}
+
+.div_texto_inicio{
+    height: 200px;
+    width: 500px;
+
+    margin: 5% auto auto auto;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.texto_inicio{
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: justify;
+
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.titulo{
+    height: 2%;
+    width: 40%;
+
+    margin: 2.5% auto auto auto;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: border-color 0.3s ease;
+}
+
+.titulo:hover > .titulo_principal{
+    font-size: 5.5vh;
+}
+
+/*################################################################################################## PAGINA 2*/
+
+.div_titulo_sobre {
+    height: 50px;
+    width: 500px;
+    margin: 4% auto auto auto;
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+    color: black;
+    font-size: 5vh;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 50px; 
+    transition: 0.3s ease-in-out;
+}
+
+.div_texto_sobre{
+    height: max-content;
+    width: 600px;
+
+    margin: 4% auto 4% auto;
+
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.div_texto_sobre_left{
+    height: max-content;
+    width: 600px;
+
+    margin: 4% auto 4% 75px;
+
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.div_texto_sobre_right{
+    height: max-content;
+    width: 600px;
+
+    margin: 4% 75px 4%;
+
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.texto_2{
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.texto_sobre{
+    width: 550px;
+    margin: auto auto auto auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    color: black;
+    font-size: 24px;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.foto_meliponario{
+    margin: 4% 75px 4% auto;
+
+    height: 350px;
+    max-width: 100%;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.foto_arudino_KKKKK{
+    margin: 4% auto 4% 75px;
+
+    height: 350px;
+    max-width: 100%;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.espasso_vazio{
+    margin-top: 25px;
+    height: 25px;
+}
+
+.fixed-image-left {
+    height: 150px;
+    max-width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.fixed-image-right{
+    height: 200px;
+    max-width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+/*################################################################################## PAGINA 3*/
+
+.perfil{
+    height: max-content;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto_participante{
+    margin: auto;
+
+    height: 120px;
+    max-width: 100%;
+
+    border-radius: 60px;
+
+    transition: 0.3s ease-in-out;
+}
+
+/*########################################################################################## HOVERS */
+
+.div_titulo_sobre:hover,
+.titulo:hover,
+.head:hover,
+.div_texto_inicio:hover,
+.foto_participante:hover,
+.foto_meliponario:hover,
+.foto_arudino_KKKKK:hover,
+.div_texto_sobre:hover,
+.div_texto_sobre_right:hover,
+.div_texto_sobre_left:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+
+
+
+
