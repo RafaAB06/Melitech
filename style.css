@@ -330,7 +330,7 @@ html, body {
 
 .background{
     background-color: rgb(63, 63, 63);
-    margin: auto;
+    margin: 50px auto auto auto;
     height: max-content;
     width: max-content;
 
