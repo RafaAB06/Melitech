@@ -1,4 +1,5 @@
 const clickSound = new Audio('./Sound/UIButton_OnClick.mp3');
+clickSound.currentTime = 0.05;
 
 const inicio = document.getElementById("inicio");
 const sobre = document.getElementById("sobre");
@@ -20,7 +21,7 @@ for (let i = 0; i < buttons.length; i++) {
         mudarPagina(i);
         clickSound.pause();
         clickSound.currentTime = 0.05;
-        clickSound.volume = 0.025;
+        clickSound.volume = 0.05;
         clickSound.play();
     });
 }
@@ -55,6 +56,19 @@ function adicionarPagina(index) {
             break;
         case 2:
             divPagina.innerHTML = pagina_3();
+            const goto_matter = document.getElementById('goto_matter');
+            goto_matter.addEventListener('click', function(){
+                const a = goto_matter.textContent;
+                goto_matter.textContent = "Carregando...";
+                clickSound.pause();
+                clickSound.currentTime = 0.05;
+                clickSound.volume = 0.05;
+                clickSound.play();
+                setTimeout(() => {  
+                    window.open("https://www.ifsc.edu.br/web/noticias/w/-melimonitor-dispositivo-criado-no-campus-sao-miguel-do-oeste-do-ifsc-leva-estudantes-ao-rio-innovation-week", "_blank");
+                    goto_matter.textContent = a;
+                }, 1000);
+            });
             break;
 
         case 3:
@@ -107,14 +121,14 @@ function pagina_2() {
                     O projeto buscava estudar e criar soluções para a criação de abelhas sem ferrão, como forma de 
                     impulsionar o desenvolvimento socioeconômico local. Desde o aprimoramente através de modelagem e 
                     impressão 3D até seminários educativos nas escolas locais e estudo das espécies de abelhas nativas 
-                    presentes no meliponários do Câmpus. A duração prevista era 10 meses, com trabalhos iniciados em fevereiro 
+                    presentes no meliponário do Câmpus. A duração prevista era 10 meses, com trabalhos iniciados em fevereiro 
                     de 2023 e finalizados em dezembro do mesmo ano.
                 </p>
             </div>
-            <img src="./Images/Meliponario.jpg" alt="Meliponário IFSC" class="foto_meliponario">
+            <img src="./Images/Meliponario.jpg" alt="Meliponário IFSC" class="foto">
         </div>
         <div class="texto_2">
-            <img src="./Images/arudino_topzera.jpg" alt="Meliponário IFSC" class="foto_arudino_KKKKK">
+            <img src="./Images/arudino_topzera.jpg" alt="Meliponário IFSC" class="foto">
             <div class="div_texto_sobre_right">
                 <p class="texto_sobre">
                     Além da prototipagem em 3D, houveram oficinas gestão de projetos, atividades de pesquisa,
@@ -125,13 +139,10 @@ function pagina_2() {
         </div>
         <div class="div_texto_sobre">
             <p class="texto_sobre">
-                No nome Melitech, Meli faz refência à palavra Melipona, gênero comum de abelhas nativas, e Tech,
+                Em Melitech, Meli faz refência à palavra Melipona, gênero comum de abelhas nativas, e Tech,
                 referência à tecnologia. Um dos principais resultados foi a criação do protótipo do chamado Meliponitor, o que levou a equipe 
                 à Rio Innovation Week 2023.
             </p>
-        </div>
-        <div class = "head">
-        <img src="./Images/riw.jpg" alt="RIW" class="melitechLogo">
         </div>
     `;
 
@@ -139,17 +150,53 @@ function pagina_2() {
 }
 
 function pagina_3() {
-    let elementHtml = '';
-    for (let i = 0; i < images.length; i++) {
-        elementHtml += `
-        <div class="perfil">
-            Cri cri cri mó trampo termina isso ta nem formatado o texto mas ta indo
+    const elementHtml = `
+        <div class = "head">
+        <img src="./Images/riw.jpg" alt="RIW" class="melitechLogo">
         </div>
-        `;
-    }
+        <div class="gif_holder">
+            <img src="./Images/melimonitor.gif" alt="gif_melimonitor" class="gif">
+            <p class="texto_legenda">
+                Estande na RIW 2023
+            </p>
+        </div>
+        <div class="background">
+            <div class="texto_2">
+                <div class="div_left_sem_borda">
+                    <p class="texto_sobre">
+                        A equipe inscreveu-se formalmente na RIW 2023 como projeto desenvolvido pela Rede Federal de Ensino, 
+                        com a ideia de apresentação de um protótipo do produto  
+                        entitulado Melimonitor; um dispositivo de monitoramente de caixas de abelhas sem ferrão, 
+                        responsável pela coleta e processamnto de dados como temperatura, umidade e fluxo de abelhas.
+                    </p>
+                </div>
+                <img src="./Images/eles_sem_eu.jpg" alt="Meliponário IFSC" class="foto_right_sem_borda">
+            </div>
+            <div class="texto_2">
+                <img src="./Images/riw_eu_bonito.jpg" alt="Meliponário IFSC" class="foto_left_sem_borda">
+                <div class="div_right_sem_borda">
+                    <p class="texto_sobre">
+                        O sistema, 
+                        além de apresentar informações num display LCD (cuja principal função era a garantia o funcionamento) ainda 
+                        comunicava-se com um aplicativo, mostrando dados em tempo real. A aplicação tinha suporte para 
+                        múltiplas caixas de abelhas, o que facilitaria a vida daqueles que criam abelhas nativas em 
+                        grande quantidade.
+                    </p>
+                </div>
+            </div>
+            <div class="div_texto_sobre_sem_borda">
+                <p class="texto_sobre">
+                    O IFSC - Câmpus são Miguel do Oeste pôde alocar recursos para pagar viagem e estadia de 5 pessoas,
+                    essas que apresentaram o projeto na maio feira de tecnologia da América Latina.
+                </p>
+            </div>
+        </div>
+        <div class="button_holder">
+        <button class="goto_matter" id="goto_matter">Clique aqui e acesse a matéria feita pelo IFSC</button>
+        </div>
+    `;
 
-    elementHtml += '<div>Porque o texto repetiu 6 vezes? aaaaaaagh</div>';
-    return elementHtml += '<div>Clica no icone do IFSC ali em cima </div>';
+    return elementHtml;
 }
 
 const images = [
@@ -164,15 +211,15 @@ const images = [
     './Images/Fotos/eu_odeio_fazer_site_aaa.png'
 ];
 const description = [
-    'Kal-El Basílio Brito',
-    'Evandro Luis da Cunha',
-    'Luiz Carlos Baron',
-    'Rafael André Brustolin',
-    'Cristian Tre Disner',
-    'Felipe Gabriel de Oliveria Dartora',
-    'Daniel Eduardo Zanol',
-    'Leonardo Basso Grzebielucas',
-    'Guilherme Morandin',
+    'Kal-El Basílio Brito,<br>Docente.',
+    'Evandro Luis da Cunha,<br>Docente.',
+    'Luiz Carlos Baron,<br>Docente.',
+    'Rafael André Brustolin,<br>Discente.',
+    'Cristian Tres Disner,<br>Discente.',
+    'Felipe Gabriel de Oliveria Dartora,<br>Discente.',
+    'Daniel Eduardo Zanol,<br>Discente.',
+    'Leonardo Basso Grzebielucas,<br>Discente.',
+    'Guilherme Morandin,<br>Discente.',
 ]
 
 function pagina_4() {
@@ -181,13 +228,16 @@ function pagina_4() {
         elementHtml += `
         <div class="perfil">
             <img src="${images[i]}" alt="foto_participante" class="foto_participante">
-            <div class="div_texto_sobre">
+            <div class="div_texto_participante">
                 <p class="texto_sobre">
                     ${description[i]}
                 </p>
             </div>
         </div>
         `;
+        if(i != images.length-1){
+            elementHtml += '<hr>';
+        }
     }
 
    return elementHtml;
@@ -195,6 +245,8 @@ function pagina_4() {
 
 const goto_ifsc = document.getElementById('goto_ifsc');
 goto_ifsc.addEventListener('click', function(){
-    window.location.href = "https://www.ifsc.edu.br/web/campus-sao-miguel-do-oeste";
+    window.open("https://www.ifsc.edu.br/web/campus-sao-miguel-do-oeste", "_blank");
 });
+
+
 

@@ -12,6 +12,8 @@ html, body {
     height: max-content;
     width: auto;
     background-color: black;
+
+    padding: 5px;
 }
 
 .icon_ifsc,
@@ -19,12 +21,12 @@ html, body {
     height: 60px;
     width: auto;
 
-    border-width: 5px;
-    border-style: solid;
-    border-color: black;
+    transition: transform .2s ease-in-out;
 }
 
 .icon_ifsc:hover{
+    border: none;
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -121,6 +123,20 @@ html, body {
     transition: 0.3s ease-in-out;
 }
 
+.foto{
+    max-width: 100%;
+    width: 500px;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    margin: auto;
+
+    transition: .3s ease-in-out;
+}
+
 .texto_inicio{
     font-family: sans-serif;
     font-size: 30px;
@@ -158,20 +174,25 @@ html, body {
     height: 50px;
     width: 500px;
     margin: 4% auto auto auto;
+
     border-style: solid;
     border-color: gray;
     border-width: 5px;
     border-radius: 5px;
+
     color: black;
     font-size: 5vh;
     text-align: center;
     font-family: sans-serif;
     font-weight: bold;
     line-height: 50px; 
+
     transition: 0.3s ease-in-out;
 }
 
 .div_texto_sobre{
+    background-color: white;
+
     height: max-content;
     width: 600px;
 
@@ -190,6 +211,8 @@ html, body {
 }
 
 .div_texto_sobre_left{
+    background-color: white;
+
     height: max-content;
     width: 600px;
 
@@ -208,6 +231,8 @@ html, body {
 }
 
 .div_texto_sobre_right{
+    background-color: white;
+
     height: max-content;
     width: 600px;
 
@@ -229,6 +254,8 @@ html, body {
     display: flex; /* Torna o elemento um flex container */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+
+    margin: auto;
 }
 
 .texto_sobre{
@@ -244,7 +271,7 @@ html, body {
     font-family: sans-serif;
 }
 
-.foto_meliponario{
+.foto_right{
     margin: 4% 75px 4% auto;
 
     height: 350px;
@@ -258,7 +285,7 @@ html, body {
     transition: 0.3s ease-in-out;
 }
 
-.foto_arudino_KKKKK{
+.foto_left{
     margin: 4% auto 4% 75px;
 
     height: 350px;
@@ -284,6 +311,8 @@ html, body {
     bottom: 0;
     left: 0;
     z-index: 9999;
+
+    transition: .3s ease-in-out;
 }
 
 .fixed-image-right{
@@ -293,21 +322,221 @@ html, body {
     bottom: 0;
     right: 0;
     z-index: 9999;
+
+    transition: .3s ease-in-out;
 }
 
 /*################################################################################## PAGINA 3*/
 
-.perfil{
+.background{
+    background-color: rgb(63, 63, 63);
+    margin: auto;
     height: max-content;
-    width: auto;
+    width: max-content;
+
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 5px;
+
+    padding-bottom: 25px;
+}
+
+.gif{
+    height: 300px;
+    max-width: 100%;
+    margin: 20px;
+
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+
+    transition: .3s ease-in-out;
+}
+
+.gif_holder{
+    margin: 25px auto 50px auto;
+
+    width: max-content;
+    height: max-content;
 
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: .3s ease-in-out;
+}
+
+.texto_legenda{
+    width: auto;
+    margin: auto auto auto auto;
+
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: .3s ease-in-out;
+}
+
+.gif_holder:hover{
+    transform: scale(1.2);
+}
+
+.gif_holder:hover > .texto_legenda, .gif{
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+
+.button_holder{
+    
+    height: max-content;
+    width: auto;
+    margin: 50px auto;
+
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.foto_participante{
+.goto_matter{
+    width: 30%;
+    background-color: gray;
+
+    height: 100px;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 15px;
+
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+
+    box-shadow: 0 10px 0 rgb(0, 0, 0);
+
+    transition: .1s ease-in-out;
+}
+
+.goto_matter:hover{
+    background-color: rgb(145, 145, 145);;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 0 rgb(58, 58, 58);
+    border-color: rgb(58, 58, 58);
+}
+
+.goto_matter:active{
+    transform: translateY(10px);
+    box-shadow: 0 0 0 rgb(124, 15, 0);
+}
+
+.div_left_sem_borda{
+    background-color: white;
+
+    height: max-content;
+    width: 600px;
+
+    margin: 4% auto 4% 75px;
+
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    transition: 0.3s ease-in-out;
+    border: none;
+    border-radius: 25px;
+}
+
+.div_right_sem_borda{
+    background-color: white;
+
+    height: max-content;
+    width: 600px;
+
+    margin: 4% 75px 4%;
+
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    transition: 0.3s ease-in-out;
+    border: none;
+    border-radius: 25px;
+}
+
+.foto_right_sem_borda{
+    margin: 4% 75px 4% 50px;
+
+    width: 350px;
+    max-height: 100%;
+
+    border-radius: 25px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.foto_left_sem_borda{
+    margin: 4% 50px 4% 75px;
+
+    width: 350px;
+    max-height: 100%;
+
+    border-radius: 25px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.div_texto_sobre_sem_borda{
+    background-color: white;
+
+    height: max-content;
+    width: 600px;
+
+    margin: 4% auto 4% auto;
+
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    border-radius: 25px;
+
+    transition: 0.3s ease-in-out;
+}
+
+/*################################################################################## PAGINA 4*/
+
+.perfil{
+    height: 150px;
+    width: 1000px;
+
     margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: .3s ease-in-out;
+}
+
+.perfil:hover{
+    transform:  scale(1.2);
+}
+
+.perfil:hover > .foto_participante, .div_texto_participante{
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+
+.foto_participante{
+    margin: auto auto auto auto;
 
     height: 120px;
     max-width: 100%;
@@ -317,20 +546,50 @@ html, body {
     transition: 0.3s ease-in-out;
 }
 
+.div_texto_participante{
+    background-color: white;
+
+    height: max-content;
+    width: 600px;
+
+    margin: auto;
+
+    display: flex; /* Torna o elemento um flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s ease-in-out;
+}
+
 /*########################################################################################## HOVERS */
 
+.div_texto_sobre_sem_borda:hover,
+.foto_right_sem_borda:hover,
+.foto_left_sem_borda:hover,
+.div_left_sem_borda:hover,
+.div_right_sem_borda:hover,
+.foto:hover,
 .div_titulo_sobre:hover,
 .titulo:hover,
 .head:hover,
 .div_texto_inicio:hover,
-.foto_participante:hover,
-.foto_meliponario:hover,
-.foto_arudino_KKKKK:hover,
+.foto_right:hover,
+.foto_left:hover,
 .div_texto_sobre:hover,
 .div_texto_sobre_right:hover,
 .div_texto_sobre_left:hover {
     transform: scale(1.2);
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+
+.fixed-image-right:hover,
+.fixed-image-left:hover {
+    transform: scale(1.2);
 }
 
 
