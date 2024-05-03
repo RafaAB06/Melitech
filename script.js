@@ -154,12 +154,6 @@ function pagina_3() {
         <div class = "head">
         <img src="./Images/riw.jpg" alt="RIW" class="melitechLogo">
         </div>
-        <div class="gif_holder">
-            <img src="./Images/melimonitor.gif" alt="gif_melimonitor" class="gif">
-            <p class="texto_legenda">
-                Estande na RIW 2023
-            </p>
-        </div>
         <div class="background">
             <div class="texto_2">
                 <div class="div_left_sem_borda">
@@ -190,6 +184,12 @@ function pagina_3() {
                     essas que apresentaram o projeto na maio feira de tecnologia da América Latina.
                 </p>
             </div>
+        </div>
+        <div class="gif_holder">
+            <img src="./Images/melimonitor.gif" alt="gif_melimonitor" class="gif">
+            <p class="texto_legenda">
+                Estande na RIW 2023
+            </p>
         </div>
         <div class="button_holder">
         <button class="goto_matter" id="goto_matter">Clique aqui e acesse a matéria feita pelo IFSC</button>
